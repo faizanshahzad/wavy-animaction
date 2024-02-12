@@ -1,0 +1,97 @@
+:root {
+    --size: 1000px;
+    --duration: 3s;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    /* background-color: #2a2a2a; */
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 3px solid white;
+    border-radius: 100%;
+    position: absolute;
+    animation: spning steps(10) var(--duration) linear;
+    opacity: 0;
+}
+
+@keyframes waves {
+    0% {
+        width: 20 0px;
+        height: 200px;
+        opacity: 1;
+    }
+
+    100% {
+        width: var(--size);
+        height: var(--size);
+        opacity: 0;
+    }
+}
+
+.circle:nth-child(2) {
+    border-color: red;
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(3) {
+    border-color: blue;
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(4) {
+    border-color: green;
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(5) {
+    border-color: rgb(255, 251, 0);
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(6) {
+    border-color: hsl(308, 100%, 25%);
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(7) {
+    border-color: rgb(2, 0, 128);
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(8) {
+    border-color: rgb(8, 233, 222);
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(9) {
+    border-color: rgb(248, 151, 6);
+    animation-delay: calc(4 * (var(--duration)/1));
+}
+
+.circle:nth-child(10) {
+    border-color: rgb(230, 9, 64);
+    animation-delay: calc(4 * (var(--duration)/1));
+}
